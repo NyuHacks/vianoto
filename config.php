@@ -18,7 +18,7 @@ if(!empty($_SESSION['U']))
 else $U = '';
 
 
-require 'page.php';
+require_once 'page.php';
 
 
 ?>

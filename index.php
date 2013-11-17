@@ -1,7 +1,46 @@
 <?php
 require 'config.php';
+require_once 'page.php';
 
-head('Annotate videos in real time');
+head('Annotate videos in real time', '<script>
+	$(document).ready(function(){
+		$.validator.addMethod("isPassEqual", 
+			function(value, element){
+				var x = $("#pass").val();
+				return value == x;
+				}, "Passwords must match");
+		$(\'#registration\').validate({
+			rules: {
+				first: {
+					required: true
+				},
+				last: {
+					required: true,
+					
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				username: {
+					required: true
+				},
+				pass: {
+					required: true,
+					minlength: 5
+				},
+				passcheck: {
+					required: true,
+					isPassEqual: true
+				}
+			},
+			submitHandler: function(form){
+				form.submit();
+			}
+		});	
+	});
+
+	</script>');
 ?>
 
 <div class="demo">
