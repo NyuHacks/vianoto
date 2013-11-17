@@ -3,9 +3,7 @@
 <script src="jQuery.tubeplayer.min.js"></script>
 <script>
 	$(document).ready(function(){
-		
-		<?=$_GET['req']?>
-		<?php die ?>
+
 		var timeChange = 0;
 		var relX = -1;
 		var relY = -1;
