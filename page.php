@@ -18,7 +18,7 @@ function head($title='', $additional='', $header = 1) {
 	</head>
 
 	<body>
-	<?php if(!$header) { ?>
+	<?php if($header) { ?>
 	<div class="whitebox"></div>
 	<div class="myheader">
 	<div class="headerlogo"><a href="/"><img src="static/vinot.png" alt="Vinot" height="50" width="181"></a></div>
