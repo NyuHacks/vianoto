@@ -9,7 +9,7 @@
 		var relY = -1;id
 		<?php
 		require '../config.pgp';
-		$req = mysql_query('SELECT * FROM comment WHERE id ='. intval($_GET['id']))or die();
+		$req = mysql_query('SELECT * FROM comment WHERE id ='. intval($_GET['req']))or die();
 		$i = 0;
 		while($e = mysql_fetch_assoc(($req))) {
 		$i++
@@ -26,6 +26,7 @@
 		var comment4 = ["Guest 4", "14.53", "152, -345", "Haters"];
 		var comment5 = ["Guest 5", "23.356", "35, -245", "Booty Sweat"];
 		*/
+
 		var all_user_comments = [<?php
 		for($j=1; $j < $i-1; $j++) echo 'comment' . $j . ', ';
 		echo 'comment' . $i;
