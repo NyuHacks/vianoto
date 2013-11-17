@@ -1,0 +1,51 @@
+.main_content{
+	position: relative;
+	margin: auto;
+	width: auto;
+	height: auto;
+}
+
+iframe{
+	margin:auto;
+}
+.interactive{
+	position: absolute;
+	width: 900px;
+	height: 220px;
+	z-index: 0;
+	top: 400px;
+	display: none;
+	background-color: gray;
+}
+
+.interactive_click{
+	position: absolute;
+	width: 900px;
+	height: 365px;
+	z-index: 0;
+	opacity: 0.4;
+	top: 0px;
+	display: block;
+	background-color: gray;
+}
+
+.comment_button{
+	width: 900px;
+	height: 20px;
+
+}
+
+.comment_box{
+	width: 900px;
+	height: 200px;
+
+}
+
+.interactive_points{
+	border: 3px solid purple;
+	height: 10px;
+	width: 10px;
+	background: purple; 
+	position: absolute;
+	z-index: -1;
+}
