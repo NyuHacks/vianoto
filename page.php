@@ -40,4 +40,27 @@ function foot(){
 	</body>
 	<?php
 }
+
+function redirect($page, $message) {
+	?>
+
+	<div style="padding:10px;font-size:11px;">
+	    <a href="<?php echo $page; ?>"><?php echo $message; ?></a>
+	</div>
+
+	<script type="text/javascript">
+	function countdown(num){
+	    document.getElementById("countdown").innerHTML = num;
+	    if (num > 0) {
+	        setTimeout("countdown("+(num-1)+")",1000);
+	    } else{
+	        window.location.href="<?php echo $page; ?>";
+	    }
+	}
+
+	countdown(2); // Set seconds to redirection
+	</script>
+
+	<?php
+}
 ?>
