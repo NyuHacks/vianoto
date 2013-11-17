@@ -1,36 +1,22 @@
 <?php 
-require ('config.php');
+require 'config.php'
 
 if (isset($_POST['submitted'])) {
 
 	$errors = array();
+	$data = array();
 
-	if (empty($_POST['first_name'])) {
-		$errors[] = 'Please Enter Your First Name';
-	} else {
-		$fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
-	}
-	
-	if (empty($_POST['last_name'])) {
-		$errors[] = 'Please Enter Your Last Name.';
-	} else {
-		$ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
-	}
-	
-	if (empty($_POST['email'])) {
-		$errors[] = 'Please Enter Your Email Address.';
-	} else {
-		$e = mysqli_real_escape_string($dbc, trim($_POST['email']));
+	foreach($_POST as $k => $e) {
+		$data[$k] = mysql_real_escape_string(trie($e));
+		if(empty($data[$k])) {
+			$err[] = 'Please complete the form';
+			break;
+		}
 	}
 
-	if (empty($_POST['password'])) {
-		$errors[] = 'Please Enter Your Password.';
-	} else {
-		$p = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
-	}
-	
-	if (empty($errors)) {
-		$q = "INSERT INTO users (first_name, last_name, email, password, registration_date) VALUES ('$fn', '$ln', '$e', SHA1('$p'), NOW() )";		
+	if(empty($err)) {
+		$q = 'INSERT INTO users (first_name, last_name, email, password, registration_date) 
+		VALUES ("'.$data['first_name'].'", "'.$data['last_name'].'", "'.$data['email'].'", "'.SHA1($data['password']).'", NOW() )';		
 		$r = @mysqli_query ($dbc, $q);
 		if ($r) {
 			echo '<h1>Thank you!</h1>';	
