@@ -14,7 +14,7 @@ function head($title='', $additional='') {
 
 	<?php echo $additional; ?>
 
-	<title><?php if(!empty($title)) echo $title . ' - ' ?>Vianoto</title>
+	<title><?php if(!empty($title)) echo $title . ' - '; ?>Vianoto</title>
 	</head>
 
 	<body>
@@ -25,8 +25,8 @@ function head($title='', $additional='') {
 		<div class="navigation"><a href="XXXXXXXXX.html">My Videos</a></div>
 		<div class="navigation"><a href="XXXXXXXXX.html">Public Stream</a></div>
 		<div class="navigationright">
-			<?php if(empty($U)) { ?><a href="XXXXXXXXX.html">Log in</a><?php } ?>
-			<?php else { ?><a href="XXXXXXXXX.html">Log out</a><?php } ?>
+			<?php if(empty($U)) { ?><a href="XXXXXXXXX.html">Log in</a><?php } 
+			 else { ?><a href="XXXXXXXXX.html">Log out</a><?php } ?>
 		</div>
 	</div>
 
@@ -39,5 +39,4 @@ function foot(){
 	</body>
 	<?php
 }
-
 ?>
