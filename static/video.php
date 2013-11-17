@@ -9,7 +9,7 @@
 		var relY = -1;
 		<?php
 		require '../config.pgp';
-		$req = mysql_query('SELECT * FROM comment WHERE id ='. intval($_GET['req']))or die();
+		$req = mysql_query('SELECT * FROM comment WHERE videoID ='. intval($_GET['req']))or die();
 		$i = 0;
 		while($e = mysql_fetch_assoc(($req))) {
 		$i++
