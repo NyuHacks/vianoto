@@ -6,7 +6,7 @@
 		
 		var timeChange = 0;
 		var relX = -1;
-		var relY = -1;id
+		var relY = -1;
 		<?php
 		require '../config.pgp';
 		$req = mysql_query('SELECT * FROM comment WHERE id ='. intval($_GET['req']))or die();
