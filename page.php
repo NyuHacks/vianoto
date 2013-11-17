@@ -20,13 +20,14 @@ function head($title='', $additional='') {
 	<body>
 	<div class="whitebox"></div>
 	<div class="myheader">
-	<div class="headerlogo"><img src="static/vinot.png" alt="Vinot" height="50" width="181"></div>
-		<div class="navigation"><a href="XXXXXXXXX.html">Add Video</a></div>
-		<div class="navigation"><a href="XXXXXXXXX.html">My Videos</a></div>
-		<div class="navigation"><a href="XXXXXXXXX.html">Public Stream</a></div>
+	<div class="headerlogo"><a href="/"><img src="static/vinot.png" alt="Vinot" height="50" width="181"></a></div>
+		<div class="navigation"><a href="video-add.html">Add Video</a></div>
+		<div class="navigation"><a href="videos.html">Videos</a></div>
+		<div class="navigation"><a href="videos.html">Public Stream</a></div>
 		<div class="navigationright">
-			<?php if(empty($U)) { ?><a href="XXXXXXXXX.html">Log in</a><?php } 
-			 else { ?><a href="XXXXXXXXX.html">Log out</a><?php } ?>
+			<?php if(empty($U)) { ?><a href="login.html">Log in</a></div><div class="navigationright">
+			<a href="register.html">Register</a></div><?php } 
+			 else { ?><a href="logout.html">Log out</a><?php } ?>
 		</div>
 	</div>
 
