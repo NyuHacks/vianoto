@@ -50,7 +50,7 @@ DEMO GOES HERE
 	<!--<div class="demo"><p>asdfasdfsad</p></div>-->
 	<h1> SIGN UP!</h1>
 	<div class="create_account">
-		<form id="registration" action="">
+		<form id="registration" action="register.html">
 			<table>
 			<!--First name-->
 			<tr>
