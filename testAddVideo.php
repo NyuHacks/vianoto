@@ -1,4 +1,5 @@
-
+<?php error_reporting(E_ALL);
+?>
 <link rel="stylesheet" type="text/css" href="index.css"/>
 
 <script src="jquery-1.10.2.js"></script>
