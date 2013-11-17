@@ -1,6 +1,5 @@
 <?php
 require 'config.php';
-require_once 'page.php';
 
 head('Annotate videos in real time', '<script>
 	$(document).ready(function(){
