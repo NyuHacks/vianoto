@@ -6,7 +6,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']) && empty($_SESSION['
 	$user = mysql_real_escape_string($_POST['username']);
 	$password = sha1($_POST['password']);
 
-	$req = mysql_query('SELECT id, username FROM user WHERE 
+	$req = mysql_query('SELECT pk_id AS id, username FROM user WHERE 
 		(username = "'.$user.'" OR email = "'.$user.'")
 			AND password = "'.$password.'"')
 		or die('I <3 MySQL');
