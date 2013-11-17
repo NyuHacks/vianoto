@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^(.*).html$ $1.php [L]
+RewriteRule ^(.*)-(.*).html$ $1.php?req=$2 [L]
+
