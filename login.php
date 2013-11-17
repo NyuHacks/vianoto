@@ -23,9 +23,8 @@ if(!empty($_POST) && empty($_SESSION['u'])) {
 }
 
 
-head('Log In', '<link rel="stylesheet" type="text/css" href="static/login.css" />');
+head('Log In', '<link rel="stylesheet" type="text/css" href="static/login.css" />', false);
 ?>
-<br><br><br>
   <div class="login">
     <h1>Log In</h1>
     <form method="post" action="">
