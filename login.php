@@ -2,7 +2,7 @@
 
 require 'config.php';
 
-if(!empty($_POST) && empty($_SESSION['u'])) {
+if(!empty($_POST['username']) && !empty($_POST['password']) && empty($_SESSION['u'])) {
 	$user = mysql_real_escape_string($_POST['username']);
 	$password = sha1($_POST['password']);
 
