@@ -25,8 +25,7 @@ if(!empty($_POST) && empty($_SESSION['u'])) {
 
 head('Log In', '<link rel="stylesheet" type="text/css" href="static/login.css" />');
 ?>
-
-  <div class="login">
+  <div class="login" style="margin-top:20px">
     <h1>Log In</h1>
     <form method="post" action="">
       <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
