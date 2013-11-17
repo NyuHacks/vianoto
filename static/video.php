@@ -8,7 +8,7 @@
 		var relX = -1;
 		var relY = -1;id
 		<?php
-
+		require '../config.pgp';
 		$req = mysql_query('SELECT * FROM comment WHERE id ='. intval($_GET['id']))or die();
 		$i = 0;
 		while($e = mysql_fetch_assoc(($req))) {
