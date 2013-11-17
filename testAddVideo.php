@@ -1,4 +1,7 @@
 <?php error_reporting(E_ALL);
+
+require 'config.php';
+
 ?>
 <link rel="stylesheet" type="text/css" href="index.css"/>
 
