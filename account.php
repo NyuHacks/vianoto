@@ -14,7 +14,6 @@ if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_SESSION['u'
 
 }
 
-
 head('Log In', '<link rel="stylesheet" type="text/css" href="static/login.css" />');
 ?>
 
@@ -23,7 +22,7 @@ head('Log In', '<link rel="stylesheet" type="text/css" href="static/login.css" /
     <form method="post" action="">  
       <p><input type="text" name="email" value="" placeholder="email"></p>
       <p><input type="password" name="password" value="" placeholder="Password"></p>
-      <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      <p class="submit"><input type="submit" name="commit" value="Update"></p>
     </form>
   </div>
 
